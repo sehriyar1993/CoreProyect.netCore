@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EntitylayerCore.Concrete.Comment>
+
+   @foreach (var x in Model)
+		{
+            <div class="feed-element">
+                <a href="#" class="float-left">
+                    <img alt="image" class="rounded-circle" src="@ViewBag.imagecomment1">
+                </a>
+                <div class="media-body ">
+                    <small class="float-right">2h ago</small>
+                    <strong>@x.CommentUserName</strong> @x.CommentTitle <strong></strong>  <br>
+                    <small class="text-muted">@(((DateTime)x.CommentDate).ToString("dd-MMM-yyyy"))</small>
+                    <div class="well">
+                        @x.CommentContent
+                    </div>
+                    <div class="float-right">
+                        <a href="" class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Bəyən </a>
+                        <a href="" class="btn btn-xs btn-white"><i class="fa fa-heart"></i> İzlə</a>
+                        <a href="" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Cavabla</a>
+                    </div>
+                </div>
+            </div>
+
+     
+        }
+
+
+    

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<EntitylayerCore.Concrete.Comment>
+
+	<div class="comment-top">
+		<h4>Şərhlər</h4>
+		@foreach (var x in Model)
+		{
+			<div class="media">
+			<img src="@ViewBag.imagecomment" alt="" style="width:60px; height:60px;" class="img-fluid" />
+				<div class="media-body">
+					<h5 class="mt-0">@x.CommentUserName</h5>
+					<p>
+						@x.CommentContent
+					</p>
+				</div>
+			</div>
+		}
+
+	</div>
+

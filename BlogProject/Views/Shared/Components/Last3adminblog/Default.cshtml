@@ -1,0 +1,30 @@
+﻿@using EntitylayerCore.Concrete;
+@model List<Blog>
+<div class="mail-attachment">
+ 
+    <h4>Son Paylaşılan Bloglar</h4>
+    <div class="attachment">
+        @foreach(var x in Model)
+    {
+        <div class="file-box">
+            <div class="file">
+                <a href="/Admin/Blog/Index/@x.BlogId">
+                    <span class="corner"></span>
+
+                    <div class="image">
+                        <img alt="image" class="img-fluid" src="@x.BlogImage">
+                    </div>
+                    <div class="file-name">
+                        @x.BlogTitle
+                        <br />
+                            <small>@(((DateTime)x.BlogDate).ToString("dd-MMM-yyyy"))</small>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    }
+        <div class="clearfix"></div>
+    </div>
+</div>
+

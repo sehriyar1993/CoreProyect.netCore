@@ -1,0 +1,120 @@
+﻿@model AppUserImage
+@{
+    ViewData["Title"] = "EditProfile";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<form class="forms-group method="post" asp-action="EditProfile" asp-asp-controller="Writer" enctype="multipart/form-data">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Profil Düzəlt</h4>
+                <div class="forms-sample">
+                    @Html.HiddenFor(x=>x.Id, new {@class ="form-control"})
+                   @* @Html.HiddenFor(x=>x.name, new {@class ="form-control"})
+                    @Html.HiddenFor(x=>x.surname, new {@class ="form-control"})
+                    @Html.HiddenFor(x=>x.Id, new {@class ="form-control"})*@
+@*                    @Html.HiddenFor(x=>x.password, new {@class ="form-control"})
+*@
+                    <div class="form-group">
+                        <label for="exampleInputName1">İstifadəçi Adı</label>
+                        @Html.TextBoxFor(x=>x.username, new {@class ="form-control"})
+                        @Html.ValidationMessageFor(x=>x.username,"", new { @class = "text-danger"})
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">Ad</label>
+                        @Html.TextBoxFor(x=>x.username, new {@class ="form-control"})
+                        @Html.ValidationMessageFor(x=>x.name,"", new { @class = "text-danger"})
+
+                    </div>    <div class="form-group">
+                        <label for="exampleInputName1">Soyad</label>
+                        @Html.TextBoxFor(x=>x.username, new {@class ="form-control"})
+                        @Html.ValidationMessageFor(x=>x.surname,"", new { @class = "text-danger"})
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Mail adresi</label>
+                        @Html.TextBoxFor(x=>x.mail, new {@class ="form-control"})
+                        @Html.ValidationMessageFor(x=>x.mail ,"", new { @class = "text-danger"})
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4">Telefon</label>
+                        @Html.TextBoxFor(x=>x.phonenumber, new { @class ="form-control"})
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleTextarea1">Haqqında</label>
+                        @Html.TextAreaFor(x=>x.about, 15, 5,   new { @class ="form-control"})
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">Şəkil Yüklə URL</label>
+                        @Html.TextBoxFor(x=>x.imageurl, new {@class ="form-control"})
+
+                    </div>
+                 @*   <div class="form-group">
+                        <label>Şəkil Yüklə</label>
+                        <input type="file" name="imageurl" />
+
+                    </div>*@
+                    <div class="form-group">
+                        <label for="exampleInputPassword4">Yeni Şifrə</label>
+                        @Html.PasswordFor(x=>x.password, new { @class ="form-control"})
+                    </div>
+                  
+                    <button type="submit" id="btn1" class="btn btn-gradient-primary mr-2">Təsdiqlə</button>
+                    <button asp-action="Index" asp-controller="DashBoard" class="btn btn-light">Ləğv Et</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+	$('#btn1').click(function () {
+		Swal.fire('Dəyişikliklər Əlavə Edildi');
+	});
+</script>
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.min.css
+" rel="stylesheet">
+
+
+
+
+
+@*@using (Html.BeginForm("EditProfile", "Writer", FormMethod.Post))
+{
+
+    <br />
+    <label for="validationCustom01">Ad</label>
+    @Html.TextBoxFor(x=>x.WriterName, new {@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.WriterName,"", new { @class = "text-danger"})
+
+    <br />
+    <label for="exampleInputPassword1 mb-2">Mail</label>
+    @Html.TextBoxFor(x=>x.WriterMail, new {@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.WriterMail ,"", new { @class = "text-danger"})
+
+    <br />
+
+    <label for="exampleInputPassword1 mb-2">Şəkil</label>
+    @Html.TextBoxFor(x=>x.WriterImage, new {@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.WriterImage ,"", new { @class = "text-danger"})
+
+    <br />
+
+
+    <label for="validationCustom02">Parol</label>
+    @Html.TextAreaFor(x=>x.WriterPassword, 15, 5,   new { @class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.WriterPassword,"", new { @class = "text-danger"})
+    <br />
+    <br />
+
+    <button type="submit" id="btn1" class="btn btn-primary submit mb-4">Təsdiqlə</button>
+
+}
+*@

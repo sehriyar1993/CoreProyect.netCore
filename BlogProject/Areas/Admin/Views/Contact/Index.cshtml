@@ -1,0 +1,56 @@
+﻿@using EntitylayerCore.Concrete
+@using X.PagedList.Mvc.Core.Common;
+@using X.PagedList;
+@using X.PagedList.Mvc.Core
+@model IPagedList<Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        @foreach(var x in Model)
+        {
+            <div class="col-lg-3">
+                <div class="contact-box center-version">
+
+                    <a href="profile.html">
+
+                        <img alt="image" class="rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Google_Contacts_icon.svg/2048px-Google_Contacts_icon.svg.png">
+
+
+                        <h3 class="m-b-xs"><strong>@x.ContactName</strong></h3>
+
+                        <div class="font-bold">@x.ContactSubject</div>
+                        <address class="m-t-md">
+                            <strong> @(((DateTime)x.ContactDate).ToString("dd-MMM-yyyy"))</strong>@x.ContactSubject<br>
+                            <abbr title="Email">Mail:</abbr> @x.ContactMail
+                        </address>
+
+                    </a>
+                    <div class="contact-box-footer">
+                        <div class="m-t-xs btn-group">
+                            <a href="" class="btn btn-xs btn-white"><i class="fa fa-phone"></i> Əlaqə </a>
+                            <a href="/Admin/Message/Add/" class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> Mail Yaz</a>
+                            <a href="" class="btn btn-xs btn-white"><i class="fa fa-user-plus"></i> İzlə</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        }
+    </div>
+    @Html.PagedListPager(Model,
+    page => Url.Action("Index", new { page }),
+    new PagedListRenderOptions {
+    DisplayLinkToIndividualPages = true,
+    DisplayPageCountAndCurrentLocation = false,
+    MaximumPageNumbersToDisplay = 10,
+    LiElementClasses = new string[] { "page-item" },
+    PageClasses = new string[] { "page-link" },
+    })
+</div>
+
+

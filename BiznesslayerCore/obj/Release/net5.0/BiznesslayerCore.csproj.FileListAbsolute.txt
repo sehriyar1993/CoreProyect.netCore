@@ -1,0 +1,17 @@
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\obj\Release\net5.0\BiznesslayerCore.csproj.AssemblyReference.cache
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\obj\Release\net5.0\BiznesslayerCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\obj\Release\net5.0\BiznesslayerCore.AssemblyInfoInputs.cache
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\obj\Release\net5.0\BiznesslayerCore.AssemblyInfo.cs
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\obj\Release\net5.0\BiznesslayerCore.csproj.CoreCompileInputs.cache
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\bin\Release\net5.0\BiznesslayerCore.deps.json
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\bin\Release\net5.0\BiznesslayerCore.dll
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\bin\Release\net5.0\BiznesslayerCore.pdb
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\bin\Release\net5.0\DataAcsessLayerCore.dll
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\bin\Release\net5.0\EntitylayerCore.dll
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\bin\Release\net5.0\DataAcsessLayerCore.pdb
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\bin\Release\net5.0\EntitylayerCore.pdb
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\obj\Release\net5.0\BiznesslayerCore.csproj.CopyComplete
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\obj\Release\net5.0\BiznesslayerCore.dll
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\obj\Release\net5.0\refint\BiznesslayerCore.dll
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\obj\Release\net5.0\BiznesslayerCore.pdb
+C:\Users\Hp Pavilion Gaming\source\repos\BiznesslayerCore\obj\Release\net5.0\ref\BiznesslayerCore.dll

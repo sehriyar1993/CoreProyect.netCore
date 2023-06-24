@@ -1,0 +1,35 @@
+﻿@using EntitylayerCore.Concrete
+@model List<Blog>
+@{
+    ViewData["Title"] = "BloglistByWriter";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+    int count = 0;
+}
+
+<table class="table Basic form elements">
+    <tr>
+        <th>#</th>
+        <th>Şəkil</th>
+        <th>Başlıq</th>
+        <th>Hazırlanma Vaxdı</th>
+        <th>Kateqoriyası</th>
+        <th>Saytda Bax</th>
+        <th>Sil</th>
+        <th>Yenilə</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td><img src="@item.BlogImage" height="50" width="50" /></td>
+            <td>@item.BlogTitle</td>
+            <td>@(((DateTime)item.BlogDate).ToString("dd-MMM-yyyy"))</td>
+            <td>@item.Category.CategoryName</td>
+            <td><a href="/Blog/BlogReadAll/@item.BlogId" class="btn btn-outline-info">Saytda Gör</a></td>
+            <td><a href="/Blog/Delete/@item.BlogId/" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Blog/Update/@item.BlogId/" class="btn btn-outline-success">Yenilə</a></td>
+        </tr>
+    }
+</table>
+<a href="/Blog/Add/" class="btn btn-outline-primary">Yeni</a>

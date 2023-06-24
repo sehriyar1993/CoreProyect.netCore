@@ -1,0 +1,58 @@
+﻿@using EntitylayerCore.Concrete
+@model List<MessageTwo>
+@{
+    ViewData["Title"] = "SendMessage";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Göndərdiyim Mesajlar</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Qəbul Edən</th>
+                                <th>Başlıq</th>
+                                @*                                <th>Mövzu</th>
+                                *@
+                                <th>Tarix</th>
+                                <th>Saytda Bax</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.MessageId
+                                    </td>
+                                    <td>
+                                        <img src="@item.RecieverAppUser.ImageUrl" class="mr-2" alt="image"> @item.RecieverAppUser.Name
+                                    </td>
+
+                                    @*<td> @item.Subject  </td>*@
+                                    <td> <label class="badge badge-gradient-success">@item.Subject</label>  </td>
+
+                                    <td> @(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
+                                    <td>
+                                        <a href="/Writer/MessageDetail/@item.MessageId" class="btn btn-outline-info">Ətraflı</a>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a href="/Writer/AddMessage/" class="btn btn-outline-success">Yeni Mesaj </a>
+                    <a href="/Writer/WriterMessage/" class="btn btn-outline-success">Gələnlər </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

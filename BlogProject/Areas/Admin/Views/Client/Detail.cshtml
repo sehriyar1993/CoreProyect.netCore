@@ -1,0 +1,66 @@
+﻿@model EntitylayerCore.Concrete.AppUser
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+        <div class="ibox-content">
+            <div class="tab-content">
+                <div id="contact-1" class="tab-pane active">
+                    
+                        <div class="row m-b-lg">
+
+                            <div class="col-lg-4 text-center">
+                            <h2>@Model.Name @Model.Surname</h2>
+
+                                <div class="m-b-sm">
+                                <img alt="image" class="rounded-circle" src="@Model.ImageUrl"
+                                         style="width: 85px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <strong>
+                                @Model.UserName
+                                </strong>
+
+                                <p>
+                                @Model.About
+                                </p>
+                              
+                            </div>
+                        </div>
+                        <div class="client-detail">
+                            <div class="full-height-scroll">
+
+                                <strong>Digər Məlumatlar</strong>
+
+                                <ul class="list-group clear-list">
+                                    <li class="list-group-item fist-item">
+                            <span class="float-right"> @Model.PhoneNumber </span>
+                                        Əlaqə Nömrəsi
+                                    </li>
+                                    <li class="list-group-item">
+                            <span class="float-right"> @Model.Email </span>
+                                        Email Adresi
+                                    </li>
+                                    <li class="list-group-item">
+                            <span class="float-right"> @Model.Gender </span>
+                                        Cinsiyyət
+                                    </li>
+                                
+                                </ul>
+                            
+                            </div>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+
+

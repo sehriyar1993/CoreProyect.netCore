@@ -1,0 +1,15 @@
+﻿@model EntitylayerCore.Concrete.About
+<div class="col-lg-6">
+    <div class="widget navy-bg no-padding">
+        <div class="p-m">
+@*            <h3 class="m-xs">Haqqımızda</h3>
+*@
+            <h5>@Model.AboutDetails2.Substring(0,Model.AboutDetails2.Substring(0,600).LastIndexOf(" "))...</h5>
+
+
+        </div>
+        <div class="flot-chart">
+            <div class="flot-chart-content" id="flot-chart1"></div>
+        </div>
+    </div>
+</div>

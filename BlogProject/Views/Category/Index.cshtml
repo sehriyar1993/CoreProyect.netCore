@@ -1,0 +1,44 @@
+﻿@using EntitylayerCore.Concrete
+@model List<Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_BlogLayout.cshtml";
+    int count = 0;
+}
+
+
+@*@{
+    Layout = null;
+    int count = 0;
+}*@
+<a href="~/lib/bootstrap/dist/css/bootstrap.css.map"></a>
+<a href="~/lib/bootstrap/dist/css/bootstrap.min.css.map"></a>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kateqoriya Adı</th>
+        <th>Statusu</th>
+        <th>Haqqında</th>
+        
+        <th>Sil</th>
+  
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.CategoryName</td>
+            <td>@item.CategoryStatus</td>
+@*            <td>@item.CategoryDescription</td>
+*@            <td><a href="#" class="btn btn-outline-success">Haqqında</a></td>
+            <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,124 @@
+﻿@model BlogProject.Models.MailRequestAdmin
+@{
+    ViewData["Title"] = "MailSend";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="ibox ">
+                <div class="ibox-content mailbox-content">
+                    <div class="file-manager">
+                        <a class="btn btn-block btn-primary compose-mail" href="mail_compose.html">Mail Göndər</a>
+                        <div class="space-25"></div>
+                        <h5>Mesalar</h5>
+                        <ul class="folder-list m-b-md" style="padding: 0">
+                            <li><a href="/Admin/Message/Index/"> <i class="fa fa-inbox "></i> İnbox <span class="label label-warning float-right">16</span> </a></li>
+                            <li><a href="/Admin/Message/Add/"> <i class="fa fa-envelope-o"></i> Mesaj Göndər</a></li>
+                            <li><a href="/Admin/Message/MailSend"> <i class="fa fa-certificate"></i>Gmail İlə Göndər</a></li>
+                            <li><a href="/Admin/Message/Send/"> <i class="fa fa-file-text-o"></i> Göndərilən Mesajlar <span class="label label-danger float-right">2</span></a></li>
+                            <li><a href="mailbox.html"> <i class="fa fa-trash-o"></i> Silinənlər</a></li>
+                        </ul>
+                        <h5>Kateqoriyalar</h5>
+                        <ul class="category-list" style="padding: 0">
+                            <li><a href="#"> <i class="fa fa-circle text-navy"></i> Biznes </a></li>
+                            <li><a href="#"> <i class="fa fa-circle text-danger"></i> İdarəetmə</a></li>
+                            <li><a href="#"> <i class="fa fa-circle text-primary"></i> Sosial</a></li>
+                            <li><a href="#"> <i class="fa fa-circle text-info"></i> Əyləncə</a></li>
+                            <li><a href="#"> <i class="fa fa-circle text-warning"></i> Müştərilər</a></li>
+                        </ul>
+                        <h5 class="tag-title">Heştəq</h5>
+                        <ul class="tag-list" style="padding: 0">
+                            <li><a href=""><i class="fa fa-tag"></i> Ailə</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> İş</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Ev</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Əylənə</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> BAyramlar</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Musiqi</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Şəkillər</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Film</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 animated fadeInRight">
+            <div class="mail-box-header">
+                <div class="float-right tooltip-demo">
+                    <a href="mailbox.html" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="sil"><i class="fa fa-pencil"></i> Sil</a>
+                    <a href="mailbox.html" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="ləğv et"><i class="fa fa-times"></i> Ləğv et</a>
+                </div>
+                <h2>
+                    Mail Göndər
+                </h2>
+            </div>
+            <div class="mail-box">
+
+
+                <div class="mail-body">
+
+                    <form method="post">
+
+                        <div class="form-group">
+                            @Html.Label("Qəbul Edən Mail Adresi")
+                            @Html.TextBoxFor(x=>x.ReceiverMail, new {@class ="form-control"})
+                        </div>
+                        <br />
+
+                        <div class="form-group">
+                            @Html.Label("Başlıq")
+                            @Html.TextBoxFor(x=>x.Subject, new {@class ="form-control"})
+                        </div>
+                        <br />
+
+                        <div class="form-group">
+                            @Html.Label("Mesaj ")
+                            @Html.TextAreaFor(x=>x.Body, 10, 2,   new { @class ="form-control"})
+                        </div>
+                        <br />
+
+                        <button class="btn btn-outline-primary">Mail Göndər</button>
+                    </form>
+
+                </div>
+
+                <div class="mail-text h-200">
+
+                    <div class="summernote">
+                        @await Component.InvokeAsync("WriterAboutOndashboard")
+
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="mail-body text-right tooltip-demo">
+                    <a class="btn btn-sm btn-white" href="mail_compose.html"><i class="fa fa-reply"></i> Cavabla</a>
+                    <a class="btn btn-sm btn-white" href="mail_compose.html"><i class="fa fa-arrow-right"></i> Başqasına Göndər</a>
+                    <button title="" data-placement="top" data-toggle="tooltip" type="button" data-original-title="Print" class="btn btn-sm btn-white"><i class="fa fa-print"></i> Çap et</button>
+                    <button title="" data-placement="top" data-toggle="tooltip" data-original-title="Trash" class="btn btn-sm btn-white"><i class="fa fa-trash-o"></i> Sil</button>
+                </div>
+                <div class="clearfix"></div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#btn1').click(function () {
+        Swal.fire('Mesajınız göndərildi');
+    });
+</script>
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.min.css
+" rel="stylesheet">
+
+

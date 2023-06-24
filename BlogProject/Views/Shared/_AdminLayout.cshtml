@@ -1,0 +1,108 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin | Səhifəsi</title>
+    <link rel="shortcut icon" href="https://hestiacp.com/logo.svg" />
+    <link href="~/inspinia-gh-pages/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/css/animate.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        @await Html.PartialAsync("~/Views/Admin/AdminSidebarPartial.cshtml")
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form class="navbar-form-custom" asp-action="GetBlogByNameAdmin" asp-controller="Blog" asp-area="Admin">
+                <div class="form-group">
+                                <input type="text" placeholder="Axdardığınız kəliməni yazın..." class="form-control" name="searchString" id="top-search">
+                </div>
+                         </form>
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">Admin Səhifəsinə Xoş Gəldiniz</span>
+                </li>
+
+                        @await Component.InvokeAsync("AdminMessage")
+                        @await Component.InvokeAsync("AdminNotification")
+
+
+                <li>
+                            <a href="/RegisterUser/SignOut">
+                        <i class="fa fa-sign-out"></i> Çıxış
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+                @RenderBody()
+
+        </div>
+        <div class="footer">
+            <div class="float-right">
+              @*  10GB of <strong>250GB</strong> Free.*@
+            </div>
+            <div>
+                    © @DateTime.Now.Year Bütün haqqlar qorunur | Design by Şəhriyar Hacıyev
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="~/inspinia-gh-pages/js/jquery-3.1.1.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/popper.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/bootstrap.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Peity -->
+    <script src="~/inspinia-gh-pages/js/plugins/peity/jquery.peity.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="~/inspinia-gh-pages/js/inspinia.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="~/inspinia-gh-pages/js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- Peity -->
+    <script src="~/inspinia-gh-pages/js/demo/peity-demo.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+    @RenderSection("ScriptSection",false)
+</body>
+
+</html>

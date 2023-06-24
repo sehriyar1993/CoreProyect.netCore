@@ -1,0 +1,83 @@
+﻿<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 footer-grid-agileits-w3ls text-left">
+				<h3>Haqqımızda</h3>
+				<p>
+					Bloq, əsasən yenidən köhnəyə doğru sıralanmış yazıların və şərhlərin yayımlandığı bir saytdır. Demək olar ki, bloq saytlarındakı şərhlər həmin bloqun əsas hərəkətverici qüvvəsidir. Şərhlərin sayəsində bloq müəllifi ilə oxucular arasında rabitə yaranır. Zaman keçdikcə bloqlarda yazılardan əlavə video....
+				</p>
+				<div class="read">
+					<a href="/About/Index/" class="btn btn-primary read-m">Davamını Oxu</a>
+				</div>
+			</div>
+			<div class="col-lg-4 footer-grid-agileits-w3ls text-left">
+
+				<div class="tech-btm">
+					
+					@await Component.InvokeAsync("BlogLast3")
+
+				</div>
+			</div>
+			<!-- subscribe -->
+			<div class="col-lg-4 subscribe-main footer-grid-agileits-w3ls text-left">
+				<p>Mail Adresinizlə Abunə olun</p>
+				<div class="subscribe-main text-left">
+					<div class="tech-btm">
+						<h4>Yeniliklərdən Xəbarda ol</h4>
+						<form action="/Newletter/SubscribeMail/" method="post">
+							<input type="email" placeholder="Email" name="Mail" required="">
+							<input type="submit" value="Abunə Olun">
+						</form>
+
+					</div>
+					<p>Spam Mesajlar göndərilmir!</p>
+				</div>
+				<!-- //subscribe -->
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer-cpy text-center">
+			<div class="footer-social">
+				<div class="copyrighttop">
+					<ul>
+						<li class="mx-3">
+							<a class="facebook" href="#">
+								<i class="fab fa-facebook-f"></i>
+								<span>Facebook</span>
+							</a>
+						</li>
+						<li>
+							<a class="facebook" href="#">
+								<i class="fab fa-twitter"></i>
+								<span>Twitter</span>
+							</a>
+						</li>
+						<li class="mx-3">
+							<a class="facebook" href="#">
+								<i class="fab fa-google-plus-g"></i>
+								<span>Google+</span>
+							</a>
+						</li>
+						<li>
+							<a class="facebook" href="#">
+								<i class="fab fa-pinterest-p"></i>
+								<span>Pinterest</span>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="w3layouts-agile-copyrightbottom">
+				<p>
+					© @DateTime.Now.Year Bütün haqqlar qorunur | Design by Şəhriyar Hacıyev
+				</p>
+
+			</div>
+		</div>
+
+		<!-- //footer -->
+
+
+	</div>
+</footer>

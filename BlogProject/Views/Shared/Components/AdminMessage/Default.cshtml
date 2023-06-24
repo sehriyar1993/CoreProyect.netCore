@@ -1,0 +1,26 @@
+﻿@using EntitylayerCore.Concrete;
+@model List<MessageTwo>
+<li class="dropdown">
+    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+        <i class="fa fa-envelope"></i>  <span class="label label-warning">@ViewBag.saymesaj</span>
+    </a>
+    <ul class="dropdown-menu dropdown-messages">
+        @foreach (var x in Model.Where(x => x.MessageStatus == true).OrderByDescending(x => x.MessageId).Take(5))
+        {
+        <li>
+            <div class="dropdown-messages-box">
+               
+                <div class="media-body">
+                        <a class="dropdown-item float-left" href="/Admin/Message/Index/">
+                            <img alt="image" class="rounded-circle" src="@x.SenderAppUser.ImageUrl" style="width:40px; height:40px;">
+                        </a>
+                        <small class="float-right">@(((DateTime)x.MessageDate).ToString("dd-MMM-yyyy")) </small>
+                        <strong>@x.SenderAppUser.Name</strong> 'dən <strong></strong>     @*@x.RecieverAppUser.Name*@ <br>
+                        <small class="text-muted"></small>
+                </div>
+            </div>
+        </li>
+        <li class="dropdown-divider"></li>
+        }
+    </ul>
+</li>

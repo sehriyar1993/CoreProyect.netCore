@@ -1,0 +1,12 @@
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\bin\Debug\net5.0\Corelayer.deps.json
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\bin\Debug\net5.0\Corelayer.dll
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\bin\Debug\net5.0\Corelayer.pdb
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\obj\Debug\net5.0\Corelayer.csproj.AssemblyReference.cache
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\obj\Debug\net5.0\Corelayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\obj\Debug\net5.0\Corelayer.AssemblyInfoInputs.cache
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\obj\Debug\net5.0\Corelayer.AssemblyInfo.cs
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\obj\Debug\net5.0\Corelayer.csproj.CoreCompileInputs.cache
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\obj\Debug\net5.0\Corelayer.dll
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\obj\Debug\net5.0\refint\Corelayer.dll
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\obj\Debug\net5.0\Corelayer.pdb
+C:\Users\Hp Pavilion Gaming\source\repos\Corelayer\obj\Debug\net5.0\ref\Corelayer.dll

@@ -1,0 +1,82 @@
+﻿@model EntitylayerCore.Concrete.Writer
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_BlogLayout.cshtml";
+}
+<script src="sweetalert2.all.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="c:\users\hp pavilion gaming\source\repos\blogproject\wwwroot\lib\jquery\dist\jquery.min.js"></script>
+<script src="c:\users\hp pavilion gaming\source\repos\blogproject\wwwroot\lib\jquery\dist\jquery.js"></script>
+<section class="main-content-w3layouts-agileits">
+	<div class="container">
+		<h3 class="tittle">Qeydiyyat</h3>
+		<div class="inner-sec">
+			<div class="login p-5 bg-light mx-auto mw-100">
+@*				<form action="Index" method="post">
+*@
+				@using(Html.BeginForm("Index", "Register", FormMethod.Post))
+				{
+					
+				<div class="form-row">
+						<div class="col-md-6 mb-3">
+							<label for="validationCustom01">Adınız</label>
+							@Html.TextBoxFor(x=>x.WriterName, new {@class ="form-control"})
+							@Html.ValidationMessageFor(x=>x.WriterName,"", new { @class = "text-danger"})
+@*							<input type="text" class="form-control" id="validationDefault01" name="WriterName" placeholder="" required="">
+*@						</div>
+						<div class="col-md-6 mb-3">
+							<label for="validationCustom02">Mail Aresiniz</label>
+							@Html.TextBoxFor(x=>x.WriterMail, new { @class ="form-control"})
+							@Html.ValidationMessageFor(x=>x.WriterMail,"", new { @class = "text-danger"})
+@*							<input type="email" class="form-control" id="validationDefault02" name="WriterMail" placeholder="" required="">
+*@
+						</div>
+					
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="exampleInputPassword1 mb-2">Parol</label>
+							@Html.TextBoxFor(x=>x.WriterPassword, new {@class ="form-control"})
+							@Html.ValidationMessageFor(x=>x.WriterPassword ,"", new { @class = "text-danger"})
+@*							<input type="password" class="form-control" id="password1" name="WriterPassword" placeholder="" required="">
+*@						</div>
+						<div class="col-md-6 mb-3">
+							<label for="validationCustom02">Şəkil Url</label>
+							@Html.TextBoxFor(x=>x.WriterImage, new { @class ="form-control"})
+							@Html.ValidationMessageFor(x=>x.WriterImage,"", new { @class = "text-danger"})
+							@*							<input type="text" class="form-control" id="validationDefault02" name="WriterImage" placeholder="" required="">
+						*@
+						</div>
+						@*<div class="form-group col-md-6">
+							<label for="exampleInputPassword2 mb-2">Təkrar Parol</label>*@
+						@*	@Html.TextBoxFor(x=>x.WriterPassword)
+							@Html.ValidationMessageFor(x=>x.WriterPassword)*@
+@*							<input type="password" class="form-control" id="password2" name="WriterPassword" placeholder="" required="">
+*@						@*</div>*@
+
+					</div>
+					<button type="submit" class="btn btn-primary submit mb-4">Qeydiyyatdan Keç</button>
+					<p>
+						<a href="#" id="btn1">Qeydiyyatdan keçməklə istifadəçi şərtləri ilə razılaşıram</a>
+					</p>
+				}
+
+			</div>
+		</div>
+
+	</div>
+	<script>
+		$('#btn1').click(function(){
+			Swal.fire('Şərtlərinizlə Razıyam');
+		});
+	</script>
+	<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js
+"></script>
+	<link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.min.css
+" rel="stylesheet">
+</section>

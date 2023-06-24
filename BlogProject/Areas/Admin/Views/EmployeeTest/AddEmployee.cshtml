@@ -1,0 +1,16 @@
+﻿@using BlogProject.Areas.Admin.Controllers;
+@model Class1
+
+@{
+    ViewData["Title"] = "AddEmployee";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Api ilə istifadəçi əlavə et</h1>
+<form method="post">
+    <label>ID</label>
+    <input asp-for=ID class="form-control" />
+    <input asp-for=Name class="form-control" />
+    <button class="btn btn-outline-success">Yenilə</button>
+</form>
+

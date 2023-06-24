@@ -1,0 +1,21 @@
+﻿@using EntitylayerCore.Concrete;
+@model List<Notification>
+<li class="dropdown">
+    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+        <i class="fa fa-bell"></i>  <span class="label label-primary">@ViewBag.saynot</span>
+    </a>
+    <ul class="dropdown-menu dropdown-alerts">
+         @foreach(var item in Model.Where(x=>x.NotificationStatus == true).OrderByDescending(x=>x.NotificationID).Take(5))
+        {
+        <li>
+            <a href="mailbox.html" class="dropdown-item">
+                <div>
+                    <i class="fa fa-envelope fa-fw"></i> @item.NotificationDetails
+                        <span class="float-right text-muted small">@(((DateTime)item.NotificationDate).ToString("dd-MM-yyyy"))</span>
+                </div>
+            </a>
+        </li>
+        <li class="dropdown-divider"></li>
+        }
+    </ul>
+</li>

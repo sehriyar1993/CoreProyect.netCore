@@ -1,0 +1,95 @@
+﻿@using EntitylayerCore.Concrete
+@model List<MessageTwo>
+@{
+    ViewData["Title"] = "Send";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="ibox ">
+                <div class="ibox-content mailbox-content">
+                    <div class="file-manager">
+                        <a class="btn btn-block btn-primary compose-mail" href="mail_compose.html">Göndərilən Mesajlar</a>
+                        <div class="space-25"></div>
+                        <h5>Mesalar</h5>
+                        <ul class="folder-list m-b-md" style="padding: 0">
+                            <li><a href="/Admin/Message/Index/"> <i class="fa fa-inbox "></i> İnbox <span class="label label-warning float-right">16</span> </a></li>
+                            <li><a href="/Admin/Message/Add/"> <i class="fa fa-envelope-o"></i> Mesaj Göndər</a></li>
+                            <li><a href="/Admin/Message/MailSend"> <i class="fa fa-certificate"></i>Gmail İlə Göndər</a></li>
+                            <li><a href="/Admin/Message/Send/"> <i class="fa fa-file-text-o"></i> Göndərilən Mesajlar <span class="label label-danger float-right">2</span></a></li>
+                            <li><a href="mailbox.html"> <i class="fa fa-trash-o"></i> Silinənlər</a></li>
+                        </ul>
+                        <h5>Kateqoriyalar</h5>
+                        <ul class="category-list" style="padding: 0">
+                            <li><a href="#"> <i class="fa fa-circle text-navy"></i> Biznes </a></li>
+                            <li><a href="#"> <i class="fa fa-circle text-danger"></i> İdarəetmə</a></li>
+                            <li><a href="#"> <i class="fa fa-circle text-primary"></i> Sosial</a></li>
+                            <li><a href="#"> <i class="fa fa-circle text-info"></i> Əyləncə</a></li>
+                            <li><a href="#"> <i class="fa fa-circle text-warning"></i> Müştərilər</a></li>
+                        </ul>
+                        <h5 class="tag-title">Heştəq</h5>
+                        <ul class="tag-list" style="padding: 0">
+                            <li><a href=""><i class="fa fa-tag"></i> Ailə</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> İş</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Ev</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Əylənə</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> BAyramlar</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Musiqi</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Şəkillər</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Film</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 animated fadeInRight">
+            <div class="mail-box-header">
+                <form method="get" asp-action="GetMessageByNameWriter" asp-controller="Message" asp-area="Admin" class="float-right mail-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm" name="searchString" placeholder="Email Axtar">
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-sm btn-primary">
+                                Axtar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <h2>
+                    Göndərilən Mesajlar
+                </h2>
+                <div class="mail-tools tooltip-demo m-t-md">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
+                        <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
+                    </div>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="İnboxu yenilə"><i class="fa fa-refresh"></i> Yenilə</button>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Oxundu olaraq işarələ"><i class="fa fa-eye"></i> </button>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Vacib olaraq qeyd et"><i class="fa fa-exclamation"></i> </button>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Çöp qutusuna daşı"><i class="fa fa-trash-o"></i> </button>
+                </div>
+            </div>
+            <div class="mail-box">
+                <table class="table table-hover table-mail">
+                    <tbody>
+                        @foreach (var x in Model.OrderByDescending(m => m.MessageDate))
+                        {
+                            <tr class="unread">
+                                <td class="check-mail">
+                                    <input type="checkbox" class="i-checks">
+                                </td>
+                                <td class="mail-ontact"><a href="/Admin/Message/Detail/@x.MessageId">@x.RecieverAppUser.Name  @x.RecieverAppUser.Surname</a></td>
+                                <td class="mail-subject"><a href="/Admin/Message/Detail/@x.MessageId">@x.Subject</a></td>
+                                <td class=""><i class="fa fa-paperclip"></i>@x.RecieverAppUser.Email</td>
+                                <td class="text-right mail-date">@(((DateTime)x.MessageDate).ToString("dd-MMM-yyyy"))</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

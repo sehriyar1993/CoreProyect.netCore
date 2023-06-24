@@ -1,0 +1,40 @@
+﻿@using EntitylayerCore.Concrete;
+@model MessageTwo
+@{
+    ViewData["Title"] = "AddMessage";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("AddMessage", "Writer", FormMethod.Post))
+{
+
+	<br />
+	<label for="validationCustom01">Başlıq</label>
+	@Html.TextBoxFor(x=>x.Subject, new {@class ="form-control"})
+
+	<br />
+	<label for="exampleInputPassword1 mb-2">Göndəriləcək İstifadəşi</label>
+	@Html.DropDownListFor(x=>x.ReceiverID,(IEnumerable<SelectListItem>)ViewBag.vappuser,new {@class="form-control"} )
+
+	<br />
+	<label for="validationCustom02">Mesajınız</label>
+	@Html.TextAreaFor(x=>x.MessageDetail, 15, 5,   new { @class ="form-control"})
+	<br />
+	<br />
+
+	<button type="submit" id="btn1" class="btn btn-primary submit mb-4">Təsdiqlə</button>
+
+}
+<script>
+	$('#btn1').click(function () {
+		Swal.fire('Mesajınız göndərildi');
+	});
+</script>
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.min.css
+" rel="stylesheet">
+

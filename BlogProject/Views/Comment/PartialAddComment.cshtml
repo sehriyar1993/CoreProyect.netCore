@@ -1,0 +1,13 @@
+﻿
+<div class="comment-top">
+	<h4>Şərh Bildir</h4>
+	<div class="comment-bottom">
+		<form action="/Comment/PartialAddComment/" method="post">
+			<input type="hidden" name="BlogId" value="@ViewBag.i" />
+			<input class="form-control" type="text" name="CommentUserName" placeholder="İstifadəçi adı" required="">
+			<input class="form-control" type="text" name="CommentTitle" placeholder="Başlıq" required="">
+			<textarea class="form-control" name="CommentContent" placeholder="Şərhiniz..." required=""></textarea>
+			<button type="submit" class="btn btn-primary submit">Şərh Bildir</button>
+		</form>
+	</div>
+</div>

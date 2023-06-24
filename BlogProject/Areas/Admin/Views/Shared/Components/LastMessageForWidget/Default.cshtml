@@ -1,0 +1,26 @@
+﻿@using EntitylayerCore.Concrete
+@model List<MessageTwo>
+
+<div>
+    <div class="chat-activity-list">
+        @foreach (var x in Model.Where(x => x.MessageStatus == true).OrderByDescending(x => x.MessageId).Take(3))
+        {
+            <div class="chat-element">
+                <a href="#" class="float-left">
+                    <img alt="image" class="rounded-circle" src="@x.SenderAppUser.ImageUrl">
+                </a>
+                <div class="media-body ">
+                    <small class="float-right text-navy">@x.SenderAppUser.Email</small>
+                    <strong>@x.SenderAppUser.Name  @x.SenderAppUser.Surname</strong>
+                    <p class="m-b-xs">
+                        @(((DateTime)x.MessageDate).ToString("dd-MMM-yyyy")) :  @x.Subject
+                    </p>
+                    <small class="text-muted">@x.MessageDetail</small>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>
+

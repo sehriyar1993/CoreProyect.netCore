@@ -1,0 +1,31 @@
+﻿@model EntitylayerCore.Concrete.MessageTwo
+
+@{
+    ViewData["Title"] = "MessageDetail";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+
+<h1>Mesajın Mövzusu</h1>
+
+<br />
+
+	@Html.HiddenFor(x=>x.MessageId)
+	<br />
+	<label for="validationCustom01">Başlıq</label>
+@Html.TextBoxFor(x=>x.Subject, new {@class ="form-control"})
+
+	
+	<br />
+
+	<label for="validationCustom02">Mövzu</label>
+@Html.TextAreaFor(x=>x.MessageDetail,15, 5, new { @class ="form-control"})
+
+
+	<br />
+
+	<br />
+<a href="/Writer/WriterMessage/" class="btn btn-outline-success">Mesajlar </a>
+	<br />
+
+
+

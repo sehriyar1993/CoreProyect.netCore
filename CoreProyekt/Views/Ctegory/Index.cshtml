@@ -1,0 +1,25 @@
+﻿@using EntitylayerCore.Concrete
+@model List<Category>
+@{
+    Layout = null;
+}
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Kateqoriya</th>
+        <th>Statusu</th>
+        <th>Haqqnda</th>
+        <th>Sil</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+        <tr>
+            <td>@x.CategoryId</td>
+            <td>@x.CategoryName</td>
+            <td>@x.CategoryStatus</td>
+            <td>@x.CategoryDescription</td>
+            <td><a href=""></a></td>
+        </tr>
+    }
+</table>

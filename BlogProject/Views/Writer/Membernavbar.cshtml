@@ -1,0 +1,61 @@
+﻿
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+          @await Component.InvokeAsync("SidebarnameMember")
+        <li class="nav-item">
+            <a class="nav-link" href="/DashBoard/Index">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+            </a>
+        </li>
+      
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/EditProfile/">
+                <span class="menu-title">Profilim</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Blog/BloglistByWriter">
+                <span class="menu-title">Bloglarım</span>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Blog/Add/">
+                <span class="menu-title">Yeni Blog</span>
+                <i class="mdi mdi-chart-bar menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/WriterMessage/">
+                <span class="menu-title">Mesajlar</span>
+                <i class="mdi mdi-message menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Notification/AllowNotification/">
+                <span class="menu-title">Bildirişlər</span>
+                <i class="mdi mdi-contact-mail menu-icon"></i>
+            </a>
+        </li>
+                <li class="nav-item">
+            <a class="nav-link" href="/Writer/EditProfile/">
+                <span class="menu-title">Ayarlar</span>
+                <i class="mdi mdi-settings menu-icon"></i>
+            </a>
+        </li>        <li class="nav-item">
+            <a class="nav-link" href="/Blog/Index/">
+                <span class="menu-title">Sayta Keç</span>
+                <i class="mdi mdi-login menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/RegisterUser/SignOut/">
+                <span class="menu-title">Çıxış</span>
+                <i class="mdi mdi-logout menu-icon"></i>
+            </a>
+        </li>
+     
+    </ul>
+</nav>

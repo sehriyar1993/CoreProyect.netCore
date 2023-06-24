@@ -1,0 +1,15 @@
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\bin\Debug\net5.0\EntitylayerCore.deps.json
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\bin\Debug\net5.0\EntitylayerCore.runtimeconfig.json
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\bin\Debug\net5.0\EntitylayerCore.runtimeconfig.dev.json
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\bin\Debug\net5.0\EntitylayerCore.dll
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\bin\Debug\net5.0\EntitylayerCore.pdb
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\obj\Debug\net5.0\EntitylayerCore.csproj.AssemblyReference.cache
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\obj\Debug\net5.0\EntitylayerCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\obj\Debug\net5.0\EntitylayerCore.AssemblyInfoInputs.cache
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\obj\Debug\net5.0\EntitylayerCore.AssemblyInfo.cs
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\obj\Debug\net5.0\EntitylayerCore.csproj.CoreCompileInputs.cache
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\obj\Debug\net5.0\EntitylayerCore.dll
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\obj\Debug\net5.0\refint\EntitylayerCore.dll
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\obj\Debug\net5.0\EntitylayerCore.pdb
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\obj\Debug\net5.0\EntitylayerCore.genruntimeconfig.cache
+C:\Users\Hp Pavilion Gaming\source\repos\EntitylayerCore\obj\Debug\net5.0\ref\EntitylayerCore.dll
